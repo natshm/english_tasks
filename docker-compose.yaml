@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  en_tasks:
+    container_name: en_tasks
+    build: .
+    ports:
+      - "80:8501"
+    entrypoint: ['streamlit', 'run', 'streamlit_frontend.py', '--server.maxUploadSize', '10']
